@@ -37,5 +37,5 @@ data "kubernetes_service" "nginx_ingress" {
 }
 
 locals {
-  nginx_ingress_ip = "${lookup(data.kubernetes_service.nginx_ingress.load_balancer_ingress[0], "ip")}"
+  nginx_ingress_ip = "${data.kubernetes_service.nginx_ingress.load_balancer_ingress.0.ip}"
 }
