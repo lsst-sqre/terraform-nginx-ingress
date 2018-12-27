@@ -6,9 +6,9 @@ deploy nginx "ingress" controller to a kubernetes cluster
 Usage
 ---
 
-```bash
+```terraform
 module "nginx_ingress" {
-  source    = "git::https://github.com/lsst-sqre/terraform-nginx-ingress.git//?ref=master"
+  source = "git::https://github.com/lsst-sqre/terraform-nginx-ingress.git//?ref=master"
 
   namespace        = "nginx-ingress" # default
   namespace_create = true
