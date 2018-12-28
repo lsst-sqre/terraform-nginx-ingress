@@ -12,3 +12,6 @@ controller:
         prometheus.io/port: "10254"
   extraArgs:
     v: 2
+controller:
+  service:
+    externalTrafficPolicy: Local
