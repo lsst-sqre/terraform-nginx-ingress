@@ -39,6 +39,7 @@ provider "helm" {
 module "nginx_ingress" {
   source = "git::https://github.com/lsst-sqre/terraform-nginx-ingress.git//?ref=master"
 
+  chart_version    = "1.0.1" # default
   namespace        = "nginx-ingress" # default
   namespace_create = true
 }
